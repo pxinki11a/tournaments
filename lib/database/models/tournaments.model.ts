@@ -29,6 +29,6 @@ const TournamentSchema = new Schema({
   organizer: { type: Schema.Types.ObjectId, ref: 'Организатор' },
 })
 
-const Event = models.Event || model('Tournament', TournamentSchema);
+const Event = models.Event || model('Tournaments', TournamentSchema);
 
 export default Event;
