@@ -51,9 +51,9 @@ export async function POST(req: Request) {
  
   // Get the ID and type
   const { id } = tour.data;
-  const eventType = tour.type;
+  const tournamentType = tour.type;
  
-  if(eventType === 'user.created') {
+  if(tournamentType === 'user.created') {
     const { id, email_addresses, image_url, first_name, last_name, username } = tour.data;
 
     const user = {
@@ -78,7 +78,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: 'OK', user: newUser })
   }
 
-  if (eventType === 'user.updated') {
+  if (tournamentType === 'user.updated') {
     const {id, image_url, first_name, last_name, username } = tour.data
 
     const user = {
@@ -93,7 +93,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: 'OK', user: updatedUser })
   }
 
-  if (eventType === 'user.deleted') {
+  if (tournamentType === 'user.deleted') {
     const { id } = tour.data
 
     const deletedUser = await deleteUser(id!)
