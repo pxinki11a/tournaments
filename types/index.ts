@@ -22,6 +22,7 @@ export type CreateUserParams = {
       startDateTime: Date
       endDateTime: Date
       categoryId: string
+      price: string
       isFree: boolean
       url: string
     }
@@ -39,6 +40,7 @@ export type CreateUserParams = {
       startDateTime: Date
       endDateTime: Date
       categoryId: string
+      price: string
       isFree: boolean
       url: string
     }
@@ -97,8 +99,9 @@ export type CreateUserParams = {
   
   // ====== ORDER PARAMS
   export type CheckoutOrderParams = {
-    eventTitle: string
-    eventId: string
+    tournamentTitle: string
+    tournamentId: string
+    price: string
     isFree: boolean
     buyerId: string
   }
@@ -112,7 +115,7 @@ export type CreateUserParams = {
   }
   
   export type GetOrdersByTournamentsParams = {
-    eventId: string
+    tournamentId: string
     searchString: string
   }
   

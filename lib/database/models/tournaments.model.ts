@@ -1,6 +1,6 @@
 import { Document, Schema, model, models } from "mongoose";
 
-export interface IEvent extends Document {
+export interface ITournaments extends Document {
   _id: string;
   title: string;
   description?: string;
@@ -9,6 +9,7 @@ export interface IEvent extends Document {
   imageUrl: string;
   startDateTime: Date;
   endDateTime: Date;
+  price: string;
   isFree: boolean;
   url?: string;
   category: { _id: string, name: string }
@@ -23,12 +24,13 @@ const TournamentSchema = new Schema({
   imageUrl: { type: String, required: true },
   startDateTime: { type: Date, default: Date.now },
   endDateTime: { type: Date, default: Date.now },
+  price: { type: String },
   isFree: { type: Boolean, default: false },
   url: { type: String },
-  category: { type: Schema.Types.ObjectId, ref: 'Категории' },
-  organizer: { type: Schema.Types.ObjectId, ref: 'Организатор' },
+  category: { type: Schema.Types.ObjectId, ref: 'Category' },
+  organizer: { type: Schema.Types.ObjectId, ref: 'User' },
 })
 
-const Event = models.Event || model('Tournaments', TournamentSchema);
+const Tournaments = models.Tournaments || model('Tournaments', TournamentSchema);
 
-export default Event;
+export default Tournaments;
