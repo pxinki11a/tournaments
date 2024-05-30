@@ -1,8 +1,9 @@
-import Search  from '@/components/shared/Search'
+
 import { getOrdersByTournament } from '@/lib/actions/order.actions'
 import { formatDateTime, formatPrice } from '@/lib/utils'
 import { SearchParamProps } from '@/types'
 import { IOrderItem } from '@/lib/database/models/order.model'
+import Search from '@/components/shared/Search'
 
 const Orders = async ({ searchParams }: SearchParamProps) => {
   const tournamentId = (searchParams?.tournamentId as string) || ''
