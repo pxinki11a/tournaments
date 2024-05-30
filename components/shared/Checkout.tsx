@@ -35,7 +35,7 @@ const Checkout = ({ tournament, userId }: { tournament: ITournaments, userId: st
   return (
     <form action={onCheckout} method="post">
       <Button type="submit" role="link" size="lg" className="button sm:w-fit">
-        {tournament.isFree ? 'Get Ticket' : 'Buy Ticket'}
+        {tournament.isFree ? 'Участвовать' : 'Участвовать в платном турнире'}
       </Button>
     </form>
   )

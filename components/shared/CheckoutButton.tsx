@@ -15,7 +15,7 @@ const CheckoutButton = ({ tournament }: { tournament: ITournaments }) => {
   return (
     <div className="flex items-center gap-3">
       {hasTournamentFinished ? (
-        <p className="p-2 text-red-400">Sorry, tickets are no longer available.</p>
+        <p className="p-2 text-red-400">Турнир уже закончен.</p>
       ): (
         <>
           <SignedOut>

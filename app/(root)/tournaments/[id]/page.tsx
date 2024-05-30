@@ -1,5 +1,5 @@
 import CheckoutButton from '@/components/shared/CheckoutButton';
-import Collection from '@/components/shared/Collection';
+import Collection from '@/components/shared/Collection'
 import { getTournamentById, getRelatedTournamentsByCategory } from '@/lib/actions/tournaments.actions'
 import { formatDateTime } from '@/lib/utils';
 import { SearchParamProps } from '@/types'
@@ -71,7 +71,7 @@ const TournamentDetails = async ({ params: { id }, searchParams }: SearchParamPr
           </div>
 
           <div className="flex flex-col gap-2">
-            <p className="p-bold-20 text-grey-600">What You'll Learn:</p>
+            <p className="p-bold-20 text-grey-600">Информация о турнире:</p>
             <p className="p-medium-16 lg:p-regular-18">{tournament.description}</p>
             <p className="p-medium-16 lg:p-regular-18 truncate text-primary-500 underline">{tournament.url}</p>
           </div>

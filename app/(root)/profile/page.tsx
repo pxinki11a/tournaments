@@ -28,7 +28,7 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
           <h3 className='h3-bold text-center sm:text-left'>Мои участия</h3>
           <Button asChild size="lg" className="button hidden sm:flex">
             <Link href="/#tournaments">
-              Explore More Tournaments
+              Найти турнир
             </Link>
           </Button>
         </div>
@@ -37,8 +37,8 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
       <section className="wrapper my-8">
         <Collection 
           data={orderedTournaments}
-          emptyTitle="No event tickets purchased yet"
-          emptyStateSubtext="No worries - plenty of exciting Tournaments to explore!"
+          emptyTitle="Вы еще не участвовали"
+          emptyStateSubtext="Не беспокойтесь, вас ждет множество захватывающих турниров!"
           collectionType="My_Requests"
           limit={3}
           page={ordersPage}
@@ -50,10 +50,10 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
       {/* Events Organized */}
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
         <div className="wrapper flex items-center justify-center sm:justify-between">
-          <h3 className='h3-bold text-center sm:text-left'>Tournaments Organized</h3>
+          <h3 className='h3-bold text-center sm:text-left'>Созданные турниры</h3>
           <Button asChild size="lg" className="button hidden sm:flex">
             <Link href="/tournaments/create">
-              Create New Event
+              Создать свой турнир
             </Link>
           </Button>
         </div>

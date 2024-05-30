@@ -6,6 +6,7 @@ import Link from 'next/link'
 import React from 'react'
 import { DeleteConfirmation } from './DeleteConfirmation'
 
+
 type CardProps = {
   tournament: ITournaments,
   hasOrderLink?: boolean,
@@ -21,7 +22,7 @@ const Card = ({ tournament, hasOrderLink, hidePrice }: CardProps) => {
   return (
     <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[438px]">
       <Link 
-        href={`/events/${tournament._id}`}
+        href={`/tournaments/${tournament._id}`}
         style={{backgroundImage: `url(${tournament.imageUrl})`}}
         className="flex-center flex-grow bg-gray-50 bg-cover bg-center text-grey-500"
       />
@@ -64,7 +65,7 @@ const Card = ({ tournament, hasOrderLink, hidePrice }: CardProps) => {
 
           {hasOrderLink && (
             <Link href={`/orders?tournamentId=${tournament._id}`} className="flex gap-2">
-              <p className="text-primary-500">Order Details</p>
+              <p className="text-primary-500">Подробнее о турнире</p>
               <Image src="/assets/icons/arrow.svg" alt="search" width={10} height={10} />
             </Link>
           )}
