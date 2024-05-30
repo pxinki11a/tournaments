@@ -14,7 +14,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
   const searchText = (searchParams?.query as string) || '';
   const category = (searchParams?.category as string) || '';
 
-  const events = await getAllTournaments({
+  const tournaments = await getAllTournaments({
     query: searchText,
     category,
     page,
