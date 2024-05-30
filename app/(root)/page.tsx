@@ -1,6 +1,6 @@
 
 import CategoryFilter from '@/components/shared/CategoryFilter';
-import Collection from '@/components/shared/Collection'
+import Collection from '@/components/shared/Collection';
 import Search from '@/components/shared/Search';
 import { Button } from '@/components/ui/button'
 import { getAllTournaments } from '@/lib/actions/tournaments.actions';
@@ -31,7 +31,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
             <p className="p-regular-20 md:p-regular-24">Присоединяйтесь миллионам пользователей, которые уже доверяют нам для управления своими турнирами.</p>
             <Button size="lg" asChild className="button w-full sm:w-fit">
               <Link href="#tournaments">
-                Создай свой турнир
+                Перейти к турнирам
               </Link>
             </Button>
           </div>
