@@ -62,8 +62,8 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
       <section className="wrapper my-8">
         <Collection 
           data={organizedTournaments?.data}
-          emptyTitle="No tournaments have been created yet"
-          emptyStateSubtext="Go create some now"
+          emptyTitle="Еще никто не создал турнир"
+          emptyStateSubtext="Вы можете создать свой турнир"
           collectionType="Tournaments_Organized"
           limit={3}
           page={tournamentsPage}

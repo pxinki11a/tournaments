@@ -1,13 +1,16 @@
 
 import CategoryFilter from '@/components/shared/CategoryFilter';
 import Collection from '@/components/shared/Collection';
+
 import Search from '@/components/shared/Search';
 import { Button } from '@/components/ui/button'
 import { getAllTournaments } from '@/lib/actions/tournaments.actions';
 import { SearchParamProps } from '@/types';
+
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Carousel from '@/components/shared/Carousel';
 
 
 export default async function Home({ searchParams }: SearchParamProps) {
@@ -21,9 +24,19 @@ export default async function Home({ searchParams }: SearchParamProps) {
     page,
     limit: 6
   })
+  
+const images = [ 
+  
+    '/assets/images/back.jpg',
+    '/assets/images/back2.jpg',
+  
+
+];
+
 
   return (
     <>
+    
     <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
         <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
           <div className="flex flex-col justify-center gap-8">
@@ -36,18 +49,18 @@ export default async function Home({ searchParams }: SearchParamProps) {
             </Button>
           </div>
 
-          <Image 
-            src="/assets/images/back.jpg"
-            alt="hero"
-            width={1000}
-            height={1000}
-            className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
-          />
+          <div className="app">
+      
+      <Carousel images={images} />
+    </div>
+
+ 
+
         </div>
       </section> 
 
       <section id="tournaments" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-        <h2 className="h2-bold">Trust by <br /> Thousands of Tournaments</h2>
+        <h2 className="h2-bold">Доступные <br /> Турниры</h2>
 
         <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
@@ -56,8 +69,8 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
         <Collection 
           data={tournaments?.data}
-          emptyTitle="No Tournaments Found"
-          emptyStateSubtext="Come back later"
+          emptyTitle="Турниры не найдены"
+          emptyStateSubtext="Вы можете создать свой турнир"
           collectionType="All_Tournaments"
           limit={6}
           page={page}
@@ -67,4 +80,6 @@ export default async function Home({ searchParams }: SearchParamProps) {
     </>
       
   );
-}
+  }
+
+

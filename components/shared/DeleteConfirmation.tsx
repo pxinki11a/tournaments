@@ -30,14 +30,14 @@ export const DeleteConfirmation = ({ tournamentId }: { tournamentId: string }) =
 
       <AlertDialogContent className="bg-white">
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you sure you want to delete?</AlertDialogTitle>
+          <AlertDialogTitle>Вы уверены что хотите удалить турнир?</AlertDialogTitle>
           <AlertDialogDescription className="p-regular-16 text-grey-600">
-            This will permanently delete this tournament
+            Вы навсегда удалите данный турнир
           </AlertDialogDescription>
         </AlertDialogHeader>
 
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogCancel>Отменить</AlertDialogCancel>
 
           <AlertDialogAction
             onClick={() =>
@@ -45,7 +45,7 @@ export const DeleteConfirmation = ({ tournamentId }: { tournamentId: string }) =
                 await deleteTournament({ tournamentId, path: pathname })
               })
             }>
-            {isPending ? 'Deleting...' : 'Delete'}
+            {isPending ? 'Удаление...' : 'Удалить'}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

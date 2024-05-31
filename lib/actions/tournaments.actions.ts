@@ -23,7 +23,7 @@ const getCategoryByName = async (name: string) => {
 
 const populateTournament = (query: any) => {
   return query
-    .populate({ path: 'organizer', model: User, select: '_id firstName lastName' })
+    .populate({ path: 'organizer', model: User, select: '_id username' })
     .populate({ path: 'category', model: Category, select: '_id name' })
 }
 

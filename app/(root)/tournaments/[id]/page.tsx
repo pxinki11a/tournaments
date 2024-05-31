@@ -33,7 +33,7 @@ const TournamentDetails = async ({ params: { id }, searchParams }: SearchParamPr
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <div className="flex gap-3">
                 <p className="p-bold-20 rounded-full bg-green-500/10 px-5 py-2 text-green-700">
-                  {tournament.isFree ? 'FREE' : `$${tournament.price}`}
+                  {tournament.isFree ? 'Бесплатно' : `${tournament.price}₽`}
                 </p>
                 <p className="p-medium-16 rounded-full bg-grey-500/10 px-4 py-2.5 text-grey-500">
                   {tournament.category.name}
@@ -81,12 +81,12 @@ const TournamentDetails = async ({ params: { id }, searchParams }: SearchParamPr
 
     {/* EVENTS with the same category */}
     <section className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-      <h2 className="h2-bold">Related Tournaments</h2>
+      <h2 className="h2-bold">Похожие турниры</h2>
 
       <Collection 
           data={relatedTournaments?.data}
-          emptyTitle="No Tournaments Found"
-          emptyStateSubtext="Come back later"
+          emptyTitle="Турниры не найдены"
+          emptyStateSubtext="Вы можете создать свой турнир"
           collectionType="All_Tournaments"
           limit={3}
           page={searchParams.page as string}

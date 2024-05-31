@@ -18,25 +18,25 @@ const Orders = async ({ searchParams }: SearchParamProps) => {
       </section>
 
       <section className="wrapper mt-8">
-        <Search placeholder="Search buyer name..." />
+        <Search placeholder="Найти участника..." />
       </section>
 
       <section className="wrapper overflow-x-auto">
         <table className="w-full border-collapse border-t">
           <thead>
             <tr className="p-medium-14 border-b text-grey-500">
-              <th className="min-w-[250px] py-3 text-left">Order ID</th>
-              <th className="min-w-[200px] flex-1 py-3 pr-4 text-left">Tournament Title</th>
+              <th className="min-w-[250px] py-3 text-left">Номер заявки</th>
+              <th className="min-w-[200px] flex-1 py-3 pr-4 text-left">Название турнира</th>
               <th className="min-w-[150px] py-3 text-left">Участник</th>
-              <th className="min-w-[100px] py-3 text-left">Created</th>
-              <th className="min-w-[100px] py-3 text-right">Amount</th>
+              <th className="min-w-[100px] py-3 text-left">Зарегистрировался на турнир</th>
+              <th className="min-w-[100px] py-3 text-right">Цена</th>
             </tr>
           </thead>
           <tbody>
             {orders && orders.length === 0 ? (
               <tr className="border-b">
                 <td colSpan={5} className="py-4 text-center text-gray-500">
-                  No orders found.
+                  Нет заявок.
                 </td>
               </tr>
             ) : (

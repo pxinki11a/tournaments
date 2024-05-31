@@ -21,7 +21,7 @@ const CheckoutButton = ({ tournament }: { tournament: ITournaments }) => {
           <SignedOut>
             <Button asChild className="button rounded-full" size="lg">
               <Link href="/sign-in">
-                Get Tickets
+                Подать заявку
               </Link>
             </Button>
           </SignedOut>

@@ -203,7 +203,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                         height={24}
                         className="filter-grey"
                       />
-                      <p className="ml-3 whitespace-nowrap text-grey-600">Start Date:</p>
+                      <p className="ml-3 whitespace-nowrap text-grey-600">Дата начала:</p>
                       <DatePicker 
                         selected={field.value} 
                         onChange={(date: Date) => field.onChange(date)} 
@@ -234,7 +234,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                         height={24}
                         className="filter-grey"
                       />
-                      <p className="ml-3 whitespace-nowrap text-grey-600">End Date:</p>
+                      <p className="ml-3 whitespace-nowrap text-grey-600">Дата окончания:</p>
                       <DatePicker 
                         selected={field.value} 
                         onChange={(date: Date) => field.onChange(date)} 
@@ -261,13 +261,13 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                   <FormControl>
                     <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
                       <Image
-                        src="/assets/icons/dollar.svg"
-                        alt="dollar"
+                        src="/assets/icons/rub.svg"
+                        alt="rub"
                         width={24}
                         height={24}
                         className="filter-grey"
                       />
-                      <Input type="number" placeholder="Price" {...field} className="p-regular-16 border-0 bg-grey-50 outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0" />
+                      <Input type="number" placeholder="Цена" {...field} className="p-regular-16 border-0 bg-grey-50 outline-offset-0 focus:border-0 focus-visible:ring-0 focus-visible:ring-offset-0" />
                       <FormField
                         control={form.control}
                         name="isFree"
@@ -275,7 +275,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                           <FormItem>
                             <FormControl>
                               <div className="flex items-center">
-                                <label htmlFor="isFree" className="whitespace-nowrap pr-3 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Free Ticket</label>
+                                <label htmlFor="isFree" className="whitespace-nowrap pr-3 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Бесплатно</label>
                                 <Checkbox
                                   onCheckedChange={field.onChange}
                                   checked={field.value}
@@ -308,7 +308,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                         height={24}
                       />
 
-                      <Input placeholder="URL" {...field} className="input-field" />
+                      <Input placeholder="Ссылка" {...field} className="input-field" />
                     </div>
 
                   </FormControl>
@@ -327,7 +327,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
         >
           {form.formState.isSubmitting ? (
             'Submitting...'
-          ): `${type} Tournament `}</Button>
+          ): `Применить `}</Button>
       </form>
     </Form>
   )

@@ -43,7 +43,7 @@ const Card = ({ tournament, hasOrderLink, hidePrice }: CardProps) => {
       > 
        {!hidePrice && <div className="flex gap-2">
           <span className="p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-60">
-            {tournament.isFree ? 'FREE' : `$${tournament.price}`}
+            {tournament.isFree ? '<Бесплатно>' : `${tournament.price}₽`}
           </span>
           <p className="p-semibold-14 w-min rounded-full bg-grey-500/10 px-4 py-1 text-grey-500 line-clamp-1">
             {tournament.category.name}

@@ -12,11 +12,11 @@ const Checkout = ({ tournament, userId }: { tournament: ITournaments, userId: st
     // Check to see if this is a redirect back from Checkout
     const query = new URLSearchParams(window.location.search);
     if (query.get('success')) {
-      console.log('Order placed! You will receive an email confirmation.');
+      console.log('Заявка подана! Вы получите сообщение на свою почту!');
     }
 
     if (query.get('canceled')) {
-      console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
+      console.log('Заявка отклонена!');
     }
   }, []);
 
