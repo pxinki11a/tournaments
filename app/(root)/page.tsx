@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { getAllTournaments } from '@/lib/actions/tournaments.actions';
 import { SearchParamProps } from '@/types';
 
-import Image from 'next/image'
+
 import Link from 'next/link'
 
 import Carousel from '@/components/shared/Carousel';

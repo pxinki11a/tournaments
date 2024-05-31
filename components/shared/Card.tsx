@@ -43,7 +43,7 @@ const Card = ({ tournament, hasOrderLink, hidePrice }: CardProps) => {
       > 
        {!hidePrice && <div className="flex gap-2">
           <span className="p-semibold-14 w-min rounded-full bg-green-100 px-4 py-1 text-green-60">
-            {tournament.isFree ? '<Бесплатно>' : `${tournament.price}₽`}
+            {tournament.isFree ? 'Бесплатно' : `${tournament.price}₽`}
           </span>
           <p className="p-semibold-14 w-min rounded-full bg-grey-500/10 px-4 py-1 text-grey-500 line-clamp-1">
             {tournament.category.name}
@@ -59,12 +59,12 @@ const Card = ({ tournament, hasOrderLink, hidePrice }: CardProps) => {
         </Link>
 
         <div className="flex-between w-full">
-          <p className="p-medium-14 md:p-medium-16 text-grey-600 p-medium-18 ml-2 mt-2 sm:mt-0 p-bold-20 px-5 py-2 rounded-full bg-neutral-200">
+          <p className="p-medium-14 md:p-medium-14 text-grey-600  ml-2 mt-2 sm:mt-0 p-bold-20 px-5 py-2 rounded-full bg-neutral-200">
                 Создан: {tournament.organizer.username}
           </p>
 
           {hasOrderLink && (
-            <Link href={`/orders?tournamentId=${tournament._id}`} className="flex gap-2">
+            <Link href={`/orders?tournamentId=${tournament._id}`} className="flex gap-6">
               <p className="text-primary-500">Подробнее о турнире</p>
               <Image src="/assets/icons/arrow.svg" alt="search" width={10} height={10} />
             </Link>

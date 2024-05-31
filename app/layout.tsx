@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Турниры",
   description: "Этот сайт предназначен для участия в турнирах",
   icons: {
-  icon: '/assets/images/logoe.svg'
+  icon: '/assets/images/logo.png'
   
   }
 };

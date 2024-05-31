@@ -65,7 +65,7 @@ export async function getOrdersByTournament({ searchString, tournamentId }: GetO
   try {
     await connectToDatabase()
 
-    if (!tournamentId) throw new Error('tournament ID is required')
+    if (!tournamentId) throw new Error('tournament ID is eqq')
     const tournamentObjectId = new ObjectId(tournamentId)
 
     const orders = await Order.aggregate([
