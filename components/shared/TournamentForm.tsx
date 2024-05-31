@@ -327,7 +327,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
         >
           {form.formState.isSubmitting ? (
             'Submitting...'
-          ): `Применить `}</Button>
+          ): `Create `}</Button>
       </form>
     </Form>
   )

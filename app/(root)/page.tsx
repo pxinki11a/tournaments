@@ -26,11 +26,12 @@ export default async function Home({ searchParams }: SearchParamProps) {
   })
   
 const images = [ 
-  
-    '/assets/images/back.jpg',
-    '/assets/images/back2.jpg',
-  
-
+    '/assets/images/rl.png',
+    '/assets/images/lol.png',
+    '/assets/images/wot.png',
+    '/assets/images/trackmania.png',
+    '/assets/images/dota2.png',
+    
 ];
 
 
