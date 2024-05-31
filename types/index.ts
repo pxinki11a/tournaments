@@ -6,6 +6,8 @@ export type CreateUserParams = {
     photo: string
   }
   
+  
+
   export type UpdateUserParams = {
     username: string
     photo: string

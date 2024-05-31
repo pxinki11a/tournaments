@@ -1,9 +1,12 @@
 import CheckoutButton from '@/components/shared/CheckoutButton';
 import Collection from '@/components/shared/Collection'
 import { getTournamentById, getRelatedTournamentsByCategory } from '@/lib/actions/tournaments.actions'
+import { getUserById } from '@/lib/actions/user.actions';
 import { formatDateTime } from '@/lib/utils';
 import { SearchParamProps } from '@/types'
 import Image from 'next/image';
+
+
 
 const TournamentDetails = async ({ params: { id }, searchParams }: SearchParamProps) => {
   const tournament = await getTournamentById(id);
@@ -40,8 +43,8 @@ const TournamentDetails = async ({ params: { id }, searchParams }: SearchParamPr
                 </p>
               </div>
 
-              <p className="p-medium-18 ml-2 mt-2 sm:mt-0">
-                by{' '}
+              <p className="p-medium-18 ml-2 mt-2 sm:mt-0 p-bold-20 px-5 py-2 rounded-full bg-neutral-200">
+                Создан: {tournament.organizer.username}
                 <span className="text-primary-500">{tournament.organizer.firstName} {tournament.organizer.lastName}</span>
               </p>
             </div>
@@ -55,10 +58,10 @@ const TournamentDetails = async ({ params: { id }, searchParams }: SearchParamPr
               <div className="p-medium-16 lg:p-regular-20 flex flex-wrap items-center">
                 <p>
                   {formatDateTime(tournament.startDateTime).dateOnly} - {' '}
-                  {formatDateTime(tournament.startDateTime).timeOnly}
+                  {formatDateTime(tournament.startDateTime).timeOnly} {'ㅤㅤㅤ'}
                 </p>
                 <p>
-                  {formatDateTime(tournament.endDateTime).dateOnly} -  {' '}
+                  {formatDateTime(tournament.endDateTime).dateOnly} - {' '}
                   {formatDateTime(tournament.endDateTime).timeOnly}
                 </p>
               </div>

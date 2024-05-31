@@ -7,7 +7,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { tournamentFormSchema } from "@/lib/validator"
 import * as z from 'zod'
-
+import ru from 'date-fns/locale/ru';
 import Dropdown from "./Dropdown"
 import { Textarea } from "@/components/ui/textarea"
 import { FileUploader } from "./FileUploader"
@@ -30,6 +30,10 @@ type TournamentFormProps = {
   tournament?: ITournaments,
   tournamentId?: string
 }
+
+
+
+
 
 const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFormProps) => {
   const [files, setFiles] = useState<File[]>([])
@@ -205,11 +209,13 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                       />
                       <p className="ml-3 whitespace-nowrap text-grey-600">Дата начала:</p>
                       <DatePicker 
+                      locale="ru"
                         selected={field.value} 
                         onChange={(date: Date) => field.onChange(date)} 
                         showTimeSelect
+                        timeFormat="HH:mm"
                         timeInputLabel="Time:"
-                        dateFormat="MM/dd/yyyy h:mm aa"
+                        dateFormat="MM/dd/yyyy kk:mm"
                         wrapperClassName="datePicker"
                       />
                     </div>
@@ -236,11 +242,13 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                       />
                       <p className="ml-3 whitespace-nowrap text-grey-600">Дата окончания:</p>
                       <DatePicker 
+                      locale="ru-RU"
                         selected={field.value} 
                         onChange={(date: Date) => field.onChange(date)} 
                         showTimeSelect
+                        timeFormat="HH:mm"
                         timeInputLabel="Time:"
-                        dateFormat="MM/dd/yyyy h:mm aa"
+                        dateFormat="MM/dd/yyyy kk:mm"
                         wrapperClassName="datePicker"
                       />
                     </div>
@@ -326,8 +334,8 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
           className="button col-span-2 w-full"
         >
           {form.formState.isSubmitting ? (
-            'Submitting...'
-          ): `Create `}</Button>
+            'Создание...'
+          ): `Создать турнир `}</Button>
       </form>
     </Form>
   )

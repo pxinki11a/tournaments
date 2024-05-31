@@ -1,12 +1,13 @@
-"use client"
-import React, { useState } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import { NextButton, PrevButton } from './CarouselButtons';
 
 interface CarouselProps {
   images: string[];
+  interval?: number; // Добавляем необязательное свойство для задания интервала автопереключения
 }
 
-const Carousel: React.FC<CarouselProps> = ({ images }) => {
+const Carousel: React.FC<CarouselProps> = ({ images, interval = 4000 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const goToNextImage = () => {
@@ -16,6 +17,12 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const goToPrevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(goToNextImage, interval);
+
+    return () => clearInterval(intervalId);
+  }, [interval]);
 
   return (
     <div className="carousel">

@@ -59,8 +59,8 @@ const Card = ({ tournament, hasOrderLink, hidePrice }: CardProps) => {
         </Link>
 
         <div className="flex-between w-full">
-          <p className="p-medium-14 md:p-medium-16 text-grey-600">
-            {tournament.organizer.username}
+          <p className="p-medium-14 md:p-medium-16 text-grey-600 p-medium-18 ml-2 mt-2 sm:mt-0 p-bold-20 px-5 py-2 rounded-full bg-neutral-200">
+                Создан: {tournament.organizer.username}
           </p>
 
           {hasOrderLink && (
