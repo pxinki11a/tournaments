@@ -207,7 +207,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                         height={24}
                         className="filter-grey"
                       />
-                      <p className="ml-3 whitespace-nowrap text-grey-600">Дата начала:</p>
+                      <p className="ml-3 whitespace-nowrap text-grey-600">Дата начала регистрации:</p>
                       <DatePicker 
                       locale="ru"
                         selected={field.value} 
@@ -240,7 +240,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                         height={24}
                         className="filter-grey"
                       />
-                      <p className="ml-3 whitespace-nowrap text-grey-600">Дата окончания:</p>
+                      <p className="ml-3 whitespace-nowrap text-grey-600">Дата окончания регистрации:</p>
                       <DatePicker 
                       locale="ru-RU"
                         selected={field.value} 
@@ -334,8 +334,8 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
           className="button col-span-2 w-full"
         >
           {form.formState.isSubmitting ? (
-            'Создание...'
-          ): `Создать турнир `}</Button>
+            'Вносим данные...'
+          ): `Применить `}</Button>
       </form>
     </Form>
   )

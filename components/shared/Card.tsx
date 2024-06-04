@@ -65,7 +65,7 @@ const Card = ({ tournament, hasOrderLink, hidePrice }: CardProps) => {
 
           {hasOrderLink && (
             <Link href={`/orders?tournamentId=${tournament._id}`} className="flex gap-6">
-              <p className="text-primary-500">Подробнее о турнире</p>
+              <p className="text-primary-500">Посмотреть заявки</p>
               <Image src="/assets/icons/arrow.svg" alt="search" width={10} height={10} />
             </Link>
           )}

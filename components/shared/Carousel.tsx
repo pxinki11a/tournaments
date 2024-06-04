@@ -28,7 +28,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 4000 }) => {
     <div className="carousel">
       
       <img src={images[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} />
-      <div className="embla__buttons">
+      <div className="embla__buttons object-center">
           <PrevButton onClick={goToPrevImage} />
           <NextButton onClick={goToNextImage} />
         </div>
