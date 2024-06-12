@@ -22,7 +22,7 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
 
   return (
     <>
-      {/* My Tickets */}
+      {/* Поданные заявки */}
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
         <div className="wrapper flex items-center justify-center sm:justify-between">
           <h3 className='h3-bold text-center sm:text-left'>Мои участия</h3>
@@ -47,7 +47,7 @@ const ProfilePage = async ({ searchParams }: SearchParamProps) => {
         />
       </section>
 
-      {/* Events Organized */}
+      {/* Созданные турниры организатором */}
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
         <div className="wrapper flex items-center justify-center sm:justify-between">
           <h3 className='h3-bold text-center sm:text-left'>Ваши созданные турниры</h3>

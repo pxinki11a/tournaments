@@ -2,13 +2,13 @@ import TournamentForm from "@/components/shared/TournamentForm"
 import { getTournamentById } from "@/lib/actions/tournaments.actions"
 import { auth  } from "@clerk/nextjs/server";
 
-type UpdateEventProps = {
+type UpdateTournamentProps = {
   params: {
     id: string
   }
 }
 
-const UpdateTournament = async ({ params: { id } }: UpdateEventProps) => {
+const UpdateTournament = async ({ params: { id } }: UpdateTournamentProps) => {
   const { sessionClaims } = auth ();
 
   const userId = sessionClaims?.userId as string;

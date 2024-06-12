@@ -7,7 +7,6 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input"
 import { tournamentFormSchema } from "@/lib/validator"
 import * as z from 'zod'
-import ru from 'date-fns/locale/ru';
 import Dropdown from "./Dropdown"
 import { Textarea } from "@/components/ui/textarea"
 import { FileUploader } from "./FileUploader"
@@ -215,7 +214,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                         showTimeSelect
                         timeFormat="HH:mm"
                         timeInputLabel="Time:"
-                        dateFormat="MM/dd/yyyy kk:mm"
+                        dateFormat="dd/MM/yyyy kk:mm"
                         wrapperClassName="datePicker"
                       />
                     </div>
@@ -248,7 +247,7 @@ const TournamentForm = ({ userId, type, tournament, tournamentId }: TournamentFo
                         showTimeSelect
                         timeFormat="HH:mm"
                         timeInputLabel="Time:"
-                        dateFormat="MM/dd/yyyy kk:mm"
+                        dateFormat="dd/MM/yyyy kk:mm"
                         wrapperClassName="datePicker"
                       />
                     </div>

@@ -23,7 +23,7 @@ const TournamentDetails = async ({ params: { id }, searchParams }: SearchParamPr
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:max-w-7xl">
         <Image 
           src={tournament.imageUrl}
-          alt="hero image"
+          alt="tournament image"
           width={1000}
           height={1000}
           className="h-full min-h-[300px] object-cover object-center"
